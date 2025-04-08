@@ -6,10 +6,14 @@ This project is a demonstration of how to create a git repo and update things li
 
 ```python
 print("testing code blocks")
+```
 
 ## Test Formatting
 
 Different kinds of text:
--**this is bold**
--*this is italics*
--`this is code`
+
+- **this is bold**
+
+- *this is italics*
+
+- `this is code`
