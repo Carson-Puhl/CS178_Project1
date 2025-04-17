@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Delete User</title>
+    <title>Delete User</title> <!-- Page title shown in browser tab -->
 </head>
 <body>
+    <!-- Header message asking for delete confirmation -->
     <h2 style="text-align:center;">Are you sure you want to delete your account?</h2>
 
     <!-- Form to confirm deletion of the user's account -->
     <form method="POST" style="text-align: center;">
+        <!-- Input field to enter username -->
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required><br><br>
 
+        <!-- Submit button to delete the account -->
         <button type="submit">Delete Account</button>
     </form>
 
+    <!-- Button to go back to the home page -->
     <div style="text-align: center;">
         <a href="{{ url_for('index') }}"><button>Back to Home</button></a>
     </div>

@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sign Up</title>
+    <meta charset="UTF-8"> <!-- Sets the character encoding -->
+    <title>Sign Up</title> <!-- Title of the page shown in the browser tab -->
 </head>
 <body>
+    <!-- Header displayed at the top of the sign-up page -->
     <h2 style="text-align: center;">Sign Up</h2>
+
+    <!-- Form for user to sign up with username and dream country -->
     <form method="POST" style="text-align: center;">
+        <!-- Input for the user's username -->
         <input name="username" placeholder="Username" required><br><br>
+
+        <!-- Input for the user's dream vacation country -->
         <input name="country" placeholder="Dream Country" required><br><br>
+
+        <!-- Submit button to send the form data -->
         <button type="submit">Submit</button>
     </form>
+
+    <!-- Button to navigate back to the homepage -->
     <a href="{{ url_for('index') }}">
         <button type="button">Go to Home</button>
     </a>

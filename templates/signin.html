@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sign In</title>
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+    <title>Sign In</title> <!-- Title shown in the browser tab -->
 </head>
 <body>
+    <!-- Header displayed at the top of the sign-in page -->
     <h2 style="text-align:center;">Sign In</h2>
     
+    <!-- Form for user to enter their username and sign in -->
     <form method="POST" style="text-align:center;">
+        <!-- Username input field -->
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required><br><br>
+
+        <!-- Submit button for the form -->
         <button type="submit">Sign In</button>
     </form>
 
+    <!-- Display error message if user is not found in DynamoDB -->
     {% if error %}
         <p style="color:red; text-align:center;">User not found.</p>
         <div style="text-align:center;">
+            <!-- Button to go back to the home page -->
             <a href="{{ url_for('index') }}">
                 <button>Back to Home</button>
             </a>
         </div>
     {% endif %}
 
+    <!-- Display error if the dream vacation country isn't found in MySQL -->
     {% if country_error %}
         <p style="color: red; text-align: center;">Dream vacation country not found in MySQL.</p>
         <div style="text-align: center;">
+            <!-- Button to go back to the home page -->
             <a href="{{ url_for('index') }}">
                 <button>Back to Home</button>
             </a>

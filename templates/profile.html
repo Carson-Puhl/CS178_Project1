@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Profile</title>
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+    <title>Profile</title> <!-- Title shown in the browser tab -->
 </head>
 <body>
+    <!-- Greeting the user by their username -->
     <h2 style="text-align: center;">Welcome, {{ user.User }}!</h2>
+
+    <!-- Displaying the user's dream vacation info including population and official language -->
     <p style="text-align: center;">
         Your dream vacation is to <strong>{{ user['Dream Vacation'] }}</strong>.<br>
-        Population: {{ "{:,}".format(user['Population']) }}<br>
+        Population: {{ "{:,}".format(user['Population']) }}<br> <!-- Formats population with commas -->
         Official Language: {{ user['Language'] }}<br>
     </p>
+
+    <!-- Button to go back to the home page -->
     <a href="{{ url_for('index') }}">
         <button type="button">Go to Home</button>
     </a>

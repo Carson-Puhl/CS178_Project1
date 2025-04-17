@@ -2,22 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Update User</title>
+    <title>Update User</title> <!-- Page title shown in browser tab -->
 </head>
 <body>
+    <!-- Header for the update page -->
     <h2 style="text-align:center;">Update Your Dream Vacation</h2>
 
     <!-- Form to update the user's dream vacation -->
     <form method="POST" style="text-align: center;">
+        <!-- Input field for the username -->
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required><br><br>
 
+        <!-- Input field for the new dream vacation country -->
         <label for="country">New Dream Vacation Country:</label>
         <input type="text" name="country" id="country" required><br><br>
 
+        <!-- Submit button to update vacation info -->
         <button type="submit">Update Vacation</button>
     </form>
 
+    <!-- Button to return to the home page -->
     <div style="text-align: center;">
         <a href="{{ url_for('index') }}"><button>Back to Home</button></a>
     </div>
