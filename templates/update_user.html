@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update User</title>
+</head>
+<body>
+    <h2 style="text-align:center;">Update Your Dream Vacation</h2>
+
+    <!-- Form to update the user's dream vacation -->
+    <form method="POST" style="text-align: center;">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required><br><br>
+
+        <label for="country">New Dream Vacation Country:</label>
+        <input type="text" name="country" id="country" required><br><br>
+
+        <button type="submit">Update Vacation</button>
+    </form>
+
+    <div style="text-align: center;">
+        <a href="{{ url_for('index') }}"><button>Back to Home</button></a>
+    </div>
+</body>
+</html>

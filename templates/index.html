@@ -2,31 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Country List</title>
+    <title>Country App</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        table { border-collapse: collapse; width: 50%; margin: 2em auto; }
-        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a.button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
-    <h2 style="text-align:center;">Top 10 Countries by Population</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Country Name</th>
-                <th>Population</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in results %}
-                <tr>
-                    <td>{{ row.Name }}</td>
-                    <td>{{ "{:,}".format(row.Population) }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <h1>Welcome to Dream Vacation Country App</h1>
+    <a href="{{ url_for('signup') }}" class="button">Sign Up</a>
+    <a href="{{ url_for('signin') }}" class="button">Sign In</a>
+    <a href="{{ url_for('update_user') }}" class="button">Update User</a>
+    <a href="{{ url_for('delete_user') }}" class="button">Delete User</a>
 </body>
 </html>

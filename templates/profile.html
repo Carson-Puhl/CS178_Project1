@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Welcome, {{ user.User }}!</h2>
+    <p style="text-align: center;">
+        Your dream vacation is to <strong>{{ user['Dream Vacation'] }}</strong>.<br>
+        Population: {{ "{:,}".format(user['Population']) }}<br>
+        Official Language: {{ user['Language'] }}<br>
+    </p>
+    <a href="{{ url_for('index') }}">
+        <button type="button">Go to Home</button>
+    </a>
+</body>
+</html>
